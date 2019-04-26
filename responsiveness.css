@@ -1,0 +1,77 @@
+/* 4. Re-Arrange
+
+Make it so that :
+
+    if small, the 3 divs are stacked on top of one and other.
+    if medium, the first div takes 2/3 of width, the second 1/3 of width and the third the full width.
+    if big, the 3 divs should be next to one another.
+
+*/
+
+@media only screen and (max-width: 300px) {
+  body {
+    background-color: red;
+  }
+  /*#medium, #large {
+    display: none;
+  }
+  #small {
+    font-size: 10px;
+  }*/
+}
+
+@media only screen and (max-width: 768px) and (min-width: 301px) {
+  body {
+    background-color: green;
+  }
+  /*#small, #large {
+    display: none;
+  }
+  #medium {
+    font-size: 20px;
+  }*/
+  #small, #medium, #large {
+    box-sizing: border-box;
+    padding: 2px;
+  }
+  #small {
+    float: left;
+    width: 66.66%;
+  }
+  #medium {
+    float: left;
+    width: 33.33%;
+  }
+  #large {
+    float: left;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+  background-color: blue;
+  }
+  /*#small, #medium {
+    display: none;
+  }
+  #large {
+    font-size: 30px;
+  }*/
+  #small, #medium, #large {
+    box-sizing: border-box;
+    float: left;
+    width: 33%;
+    padding: 2px;
+  }
+}
+
+
+
+
+
+
+
+
+
